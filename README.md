@@ -1,6 +1,6 @@
 # dsh-terminal-preset
 
-一个给 DeepSeek Harness 用的 bundle. 装进 profile 之后会多出一个 `Terminal` agent 预设: 常规编码工具, 外加 6 个持久 PTY 终端工具.
+一个给 DeepSeek Harness 用的 bundle. 装进 profile 之后会多出一个 `Terminal` agent 预设: 随发行 `standard` 预设的完整工具集, 外加 6 个持久 PTY 终端工具.
 
 ## 为什么需要它
 
@@ -21,7 +21,9 @@ github:azazo1/dsh-terminal-preset
 | 文件 | 作用 |
 |---|---|
 | `package.json` | 声明 `dsh.bundle.patch`, 并把 `@deepseek-ai/dsh-tool-terminal` 钉在 `0.1.7-rc.2` |
-| `cordis.patch.yml` | 插入 `preset-terminal` 声明, 内含 PTY 组 (服务 + 后端 + 工具) |
+| `cordis.patch.yml` | 插入 `preset-terminal` 声明: 抄自同版本 `standard` 预设的完整插件列表, 在 `tool-jobs` 之后插入 PTY 组 (会话服务 + shell 后端 + 6 个工具) |
+
+`cordis.patch.yml` 里的插件列表是随发行 `standard` 的**拷贝**, 不是引用. 官方升级后如果 standard 增删了行, 这份拷贝不会跟着变, 要手工同步 (对照 `packages/bundle/web-app/presets/standard.patch.yml`, 它也在 `app.asar` 的 `dsh/node_modules/@deepseek-ai/dsh-web-app/presets/` 下).
 
 钉住的 `0.1.7-rc.2` 对应 dsh 0.1.7-rc.2 那一代. Harness 升级到新一代之后, 这里要跟着改并重装, 否则预设那一行会解析到旧包.
 
