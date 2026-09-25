@@ -1,5 +1,5 @@
 {
-  "name": "@local/dsh-terminal-preset",
+  "name": "dsh-terminal-preset",
   "version": "1.0.0",
   "private": true,
   "type": "module",
