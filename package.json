@@ -1,0 +1,18 @@
+{
+  "name": "@local/dsh-terminal-preset",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Adds a Terminal agent preset that mounts the six persistent PTY tools.",
+  "files": [
+    "cordis.patch.yml"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "dependencies": {
+    "@deepseek-ai/dsh-tool-terminal": "0.1.7-rc.2"
+  }
+}
