@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "Adds a Terminal agent preset that mounts the six persistent PTY tools.",
+  "description": "Adds a Terminal agent preset: the standard toolset plus persistent PTY terminals.",
   "files": [
     "cordis.patch.yml"
   ],

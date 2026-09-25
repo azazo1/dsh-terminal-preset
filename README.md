@@ -1,6 +1,6 @@
 # dsh-terminal-preset
 
-一个给 DeepSeek Harness 用的 bundle. 装进 profile 之后会多出一个 `Terminal` agent 预设: 随发行 `standard` 预设的完整工具集, 外加 6 个持久 PTY 终端工具.
+一个给 DeepSeek Harness 用的 bundle. 装进 profile 之后会多出一个 `Terminal` agent 预设: 随发行 `standard` 预设的完整工具集, 外加持久 PTY 终端.
 
 ## 为什么需要它
 

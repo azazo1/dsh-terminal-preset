@@ -8,7 +8,7 @@
       config:
         id: terminal
         name: Terminal
-        description: 标准预设的全部工具, 外加 6 个持久 PTY 终端工具 (terminal_open, terminal_send, terminal_read, terminal_signal, terminal_close, terminal_list).
+        description: 标准预设的全部工具, 外加持久 PTY 终端.
         order: 20
         plugins:
           - id: persona
